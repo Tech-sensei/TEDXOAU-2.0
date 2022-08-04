@@ -1,0 +1,89 @@
+.eventgain {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    &--header {
+      .eventgain-header {
+        font-size: 2rem;
+        line-height: 1.6;
+        font-weight: 700;
+        color: var(--text-color-white);
+        position: relative;
+      }
+      .eventgain-header::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background-color: var(--text-color-red);
+      }
+    }
+    &--contents {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      &_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0 1rem;
+        .contents__item--header {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          .contents__item--header-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff58602d;
+            height: 4.5rem;
+            width: 4.5rem;
+            border-radius: 50%;
+            & span {
+              color: var(--text-color-red);
+            }
+          }
+          h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-color-red);
+          }
+        }
+        .contents__item--summary {
+          p {
+            line-height: 1.6;
+            font-size: 1.5rem;
+            text-align: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+  .eventgain__container--contents {
+    grid-template-columns: repeat(3, 1fr);
+    .meet, .talk{
+        align-self: flex-start;
+    }
+  }
+}
+
+@media screen and (min-width: 968px) {
+}
+
+@media screen and (min-width: 1200px) {
+}

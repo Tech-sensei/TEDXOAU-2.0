@@ -1,0 +1,166 @@
+.home__container {
+  display: grid;
+  place-content: center;
+  gap: 5rem;
+  margin-top: 5rem;
+  &--intro {
+    .intro-title {
+      color: var(--text-color-white);
+      font-size: 4rem;
+    }
+    .intro-subtitle {
+      color: var(--text-color-red);
+      font-size: 4rem;
+    }
+  }
+  &--left {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    &_contents {
+      & h2 {
+        font-size: 1.4rem;
+        font-weight: 100;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &--right {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    &_contents-main {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      font-weight: 100;
+    }
+    &_contents-submain {
+      text-transform: capitalize;
+      bottom: 6%;
+      right: 10%;
+      color: var(--text-color-red);
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+  }
+
+  .home-scroll {
+    text-align: center;
+    margin-bottom: 3rem;
+    .scroll-link {
+      color: var(--text-color-red);
+      transition: 0.3s;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
+    .scroll-name {
+      color: #fff;
+      margin-right: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .scroll-btn {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+/* Scroll top */
+.scrolltop {
+  position: fixed;
+  right: 2.5rem;
+  margin-bottom: 2.5rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background: var(--text-color-red);
+  color: #fff;
+  z-index: 10;
+  transition: 0.5s;
+  visibility: hidden;
+}
+
+.scrolltop--icon {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* Show scroll top */
+.show-scroll {
+  visibility: visible;
+  bottom: 1.5rem;
+}
+
+/*-- ================ MEDIA QUERIES ============ --*/
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (max-width: 967px) {
+  //Only For the round scrolling
+  .text__scroll {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .home__container {
+    align-items: flex-start;
+    justify-content: flex-start;
+    grid-template-columns: 70% 25%;
+    &--intro {
+      .intro-title {
+        color: var(--text-color-white);
+        font-size: 10rem;
+      }
+      .intro-subtitle {
+        color: var(--text-color-red);
+        font-size: 10rem;
+      }
+    }
+
+    &--left {
+      margin-top: 10rem;
+      &_contents {
+        width: 60%;
+        & h2 {
+          font-size: 1.5rem;
+          font-weight: 100;
+        }
+      }
+    }
+    .home-scroll {
+      display: none;
+    }
+
+    &--right {
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      &_contents-main {
+        font-size: 1.7rem !important;
+        font-weight: 100;
+      }
+      &_contents-submain {
+        font-weight: 400;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .text__scroll {
+    display: block;
+  }
+  .text__scroll {
+    // i copied this style from from the animation scss
+    align-self: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+}

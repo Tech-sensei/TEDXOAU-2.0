@@ -1,0 +1,128 @@
+@use "../abstracts" as a;
+
+/*========== NAV ==========*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+@media screen and (max-width: 967px) {
+  .nav__menu {
+    position: fixed;
+    right: -100%;
+    top: 0%;
+    width: 30%;
+    height: 100vh;
+    padding: 1.5rem 0rem;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    background-color: var(--text-color-red);
+    z-index: var(--z-fixed);
+    transition: 0.8s;
+  }
+  .ticket-btn-desktop {
+    display: none;
+  }
+}
+
+.nav-close {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--title-color);
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.nav__logo img {
+  width: 150px;
+  object-fit: cover;
+}
+.nav__toggle {
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.nav__toggle {
+  font-size: 2.5rem;
+}
+.nav__link {
+  font-size: 1.5rem;
+  position: relative;
+}
+.ticket-btn {
+  border: none;
+  outline: none;
+  background-color: var(--text-color-red);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #ffffff;
+}
+
+/* show Menu toggle from classList in JS */
+.show-menu {
+  right: 0;
+}
+
+.active--link::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  left: 0;
+  bottom: -5px;
+  background-color: #fff;
+}
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 968px) {
+  // .header {
+  //   position: fixed;
+  //   top: 15%;
+  //   left: -45%;
+  //   transform: rotate(-90deg);
+  // }
+
+  // .nav__logo {
+  //   display: none;
+  // }
+
+  .nav__list {
+    flex-direction: row;
+    column-gap: 2.5rem;
+  }
+  .nav__link {
+    font-size: 1.5rem;
+  }
+
+  .nav__toggle,
+  .nav-close,
+  .ticket-btn-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav {
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .header {
+  //   top: 50%;
+  //   left: -48%;
+  //   background-color: none;
+  // }
+}
+
+// Media Queries

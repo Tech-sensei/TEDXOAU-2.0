@@ -1,0 +1,277 @@
+/********* This is Team specific styles ***********/
+@use "../abstracts" as a;
+.team-header{
+    padding: 10rem 0 0 ;
+}
+.team {
+  &__head {
+    &--row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      .team__head-img {
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &--column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__text {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 1.5;
+    // @include a.main-center;
+    // margin: a.$m-3;
+    font-weight: 300;
+  }
+
+  .text__big {
+    font-size: 7rem;
+    font-weight: var(--font-weight-bold);
+    color: rgba(255, 255, 255, 0.3); //to be editted
+  }
+
+  &__group {
+    // @include a.flex-row;
+    // flex-wrap: wrap;
+    // justify-content: flex-start;
+    // margin: 4rem 0;
+    margin: 5rem 0;
+    gap: 2.5rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  // &__body {
+  //   width: 32%;
+  // }
+  &__item {
+    position: relative;
+    background-color: var(--body-color);
+    overflow: hidden;
+    cursor: pointer;
+    &:hover .team__img {
+      filter: grayscale(0%);
+    }
+  }
+  &__figure {
+    box-sizing: border-box;
+    display: grid;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-top: 100%;
+  }
+  &__img {
+    position: absolute;
+    bottom: 0;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+    filter: grayscale(100%);
+  }
+  &__details {
+    color: var(--text-color-white);
+    text-align: center;
+  }
+  &__name {
+    font-weight: var(--font-weight-bold);
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+  &__role {
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-color-red);
+  }
+}
+
+.preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(230, 43, 30, 0.35); //adjust this
+  // background-color: #000;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  &__body {
+    display: none;
+    padding: 2rem;
+    background: var(--body-color);
+    color: var(--text-color-white);
+    position: relative;
+    margin: 2rem;
+    width: 60rem;
+    height: 400px;
+    overflow: auto;
+    animation-duration: 0.4s;
+    animation-name: popup;
+    &.active {
+      display: inline-block;
+    }
+  }
+  &__btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__photo {
+    border-radius: 35px;
+    /* filter: grayscale(100%); */
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+  }
+  &__bio {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    // text-align: justify;
+    font-weight: 100;
+    line-height: 1.5;
+  }
+  &__name {
+    font-size: 2rem;
+    line-height: 1.75rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 1rem;
+  }
+  &__role {
+    font-size: var(--h2-font-size);
+    line-height: 1.25rem;
+    font-weight: var(--font-weight);
+  }
+  &-btn-close i {
+    font-size: 2rem;
+  }
+}
+
+.team-footer {
+  margin-top: 15rem;
+  margin: 0 auto;
+}
+
+// /*======== HEADER ========*/
+// .header {
+//   padding: 2rem 0;
+// }
+
+/*=========== MAIN ===========*/
+// TEAM
+
+/* ==========TEAM PREVIEW STYLES ======== */
+
+/*=============== MEDIA QUERIES ===============*/
+/* For medium devices */
+/* We will need to redo this  */
+@media screen and (min-width: 576px) {
+  .team__group {
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .team__group {
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .preview__body {
+    height: auto;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 968px) {
+  .nav__mini {
+    font-size: 3rem;
+    padding: 2rem;
+  }
+  .heading-main {
+    font-size: 12rem;
+  }
+  .team__group {
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .team {
+    &__head {
+      &--row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5rem;
+        .team__head-img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+      &--column {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &__text {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      text-align: left;
+      line-height: 1.5;
+      // @include a.main-center;
+      // margin: a.$m-3;
+      font-weight: 300;
+    }
+
+    .text__big {
+      font-size: 25rem;
+      font-weight: var(--font-weight-bold);
+      color: rgba(255, 255, 255, 0.3); //to be editted
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /*.bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }*/
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
