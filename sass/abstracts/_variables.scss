@@ -1,7 +1,7 @@
 /********* This is for all Sass Variables ***********/
 
 /*==================== GOOGLE FONTS ====================*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root {
   --header-height: 3rem;
@@ -13,7 +13,7 @@
   --container-color: #fff;
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: Helvetica, sans-serif;
 
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;

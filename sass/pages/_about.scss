@@ -1,7 +1,7 @@
 @use "../abstracts" as a;
 
 .about__header {
-  min-height: 100vh;
+  // min-height: 100vh;
   padding: 0;
 
   &--container {
@@ -10,7 +10,7 @@
     height: 100vh;
     background-size: cover;
     background-attachment: fixed;
-    clip-path: circle(180vh at -100% -81vh);
+    // clip-path: circle(180vh at -100% -81vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,11 +38,11 @@
         font-weight: 500;
         margin-bottom: 2rem;
 
-        &:hover {
-          color: var(--text-color-red);
-          cursor: pointer;
-          transform: translateX(1rem);
-        }
+        // &:hover {
+        //   color: var(--text-color-red);
+        //   cursor: pointer;
+        //   transform: translateX(1rem);
+        // }
       }
       &_summary {
         font-size: 1.6rem;
@@ -61,7 +61,7 @@
 @media screen and (min-width: 768px) {
   .sponsors__header {
     &--container {
-      clip-path: circle(180vh at 50% -90vh);
+      // clip-path: circle(180vh at 50% -90vh);
       &_contents {
         h2 {
           font-size: 5rem;
@@ -74,7 +74,7 @@
 @media screen and (min-width: 968px) {
   .about__header {
     &--container {
-      clip-path: circle(180vh at 50% -80vh);
+      // clip-path: circle(180vh at 50% -80vh);
       &_contents {
         h2 {
           font-size: 10rem;

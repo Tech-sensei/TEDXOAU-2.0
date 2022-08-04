@@ -49,17 +49,15 @@ const scrollToTop = (e) => {
 };
 window.addEventListener("scroll", scrollToTop);
 
-
-
 /*==================== SCROLL DOWN ====================*/
 const scrollToNextSec = document.querySelector(".home-scroll");
-const scrollSection = document.querySelector(".home");
+const scrollSection = document.querySelector(".blog__img");
 scrollToNextSec.addEventListener("click", function (e) {
   e.preventDefault();
   if (e.target.classList.contains("scroll-btn")) {
     console.log("scroll");
   }
-  //   section1.scrollIntoView({ behavior: "smooth" }); //This is not the queryselector u want to use
+  scrollSection.scrollIntoView({ behavior: "smooth" }); //This is not the queryselector u want to use
 });
 
 /*==================== TEDxOAU TEXT ANIMATION ====================*/
@@ -107,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // start the text animation
   StartTextAnimation(0);
 });
-
 
 //////////////////////////////////////
 // Slider
@@ -163,6 +160,3 @@ const slider = function () {
   });
 };
 slider();
-
-
-

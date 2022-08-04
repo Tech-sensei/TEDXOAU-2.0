@@ -1,0 +1,64 @@
+/********* This is for Sidebar ***********/
+
+@use "../abstracts" as a;
+.updates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  &__box {
+    background-color: var(--text-color-red);
+    height: 5rem;
+    width: 100%;
+    border: 1px solid var(--text-color-red);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    &--white {
+      background-color: var(--text-color-white);
+      border: 1px solid var(--text-color-white);
+    }
+  }
+  &__text {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: auto;
+    &--red {
+      color: var(--text-color-red);
+    }
+  }
+}
+
+// Media Queries
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (max-width: 967px) {
+  //Only For the round scrolling
+}
+
+@media screen and (min-width: 968px) {
+  .updates {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0rem;
+    &__box {
+      height: 25rem;
+      width: 50%;
+    }
+    &__text {
+      font-size: 10rem;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}

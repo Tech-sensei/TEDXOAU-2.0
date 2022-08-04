@@ -115,6 +115,10 @@
     align-items: flex-start;
     justify-content: flex-start;
     grid-template-columns: 70% 25%;
+    margin-top: 15rem;
+    gap: 35rem;
+
+    grid-template-columns: repeat(2, 1fr);
     &--intro {
       .intro-title {
         color: var(--text-color-white);
@@ -127,9 +131,8 @@
     }
 
     &--left {
-      margin-top: 10rem;
       &_contents {
-        width: 60%;
+        // width: 60%;
         & h2 {
           font-size: 1.5rem;
           font-weight: 100;

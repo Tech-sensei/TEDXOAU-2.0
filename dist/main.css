@@ -1,6 +1,5 @@
 /********* This is for all Sass Variables ***********/
 /*==================== GOOGLE FONTS ====================*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 :root {
   --header-height: 3rem;
   /*========== Colors ==========*/
@@ -9,7 +8,7 @@
   --body-color: hsl(0, 0%, 0%);
   --container-color: #fff;
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: Helvetica, sans-serif;
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -175,7 +174,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6rem;
+  gap: 2.5rem;
 }
 .footer__container--contents_socials .footer__social--menu .footer__social--list {
   display: flex;
@@ -274,7 +273,7 @@ a {
 .nav__list {
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  row-gap: 3.5rem;
   align-items: center;
   position: relative;
 }
@@ -344,8 +343,54 @@ a {
     align-items: center;
   }
 }
+/********* This is for Sidebar ***********/
+.updates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.updates__box {
+  background-color: var(--text-color-red);
+  height: 5rem;
+  width: 100%;
+  border: 1px solid var(--text-color-red);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+}
+.updates__box--white {
+  background-color: var(--text-color-white);
+  border: 1px solid var(--text-color-white);
+}
+.updates__text {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: auto;
+}
+.updates__text--red {
+  color: var(--text-color-red);
+}
+
+@media screen and (min-width: 968px) {
+  .updates {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0rem;
+  }
+  .updates__box {
+    height: 25rem;
+    width: 50%;
+  }
+  .updates__text {
+    font-size: 10rem;
+    margin: auto;
+  }
+}
 .about__header {
-  min-height: 100vh;
   padding: 0;
 }
 .about__header--container {
@@ -354,8 +399,6 @@ a {
   height: 100vh;
   background-size: cover;
   background-attachment: fixed;
-  -webkit-clip-path: circle(180vh at -100% -81vh);
-          clip-path: circle(180vh at -100% -81vh);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,11 +425,6 @@ a {
   font-weight: 500;
   margin-bottom: 2rem;
 }
-.about__container--description_title:hover {
-  color: var(--text-color-red);
-  cursor: pointer;
-  transform: translateX(1rem);
-}
 .about__container--description_summary {
   font-size: 1.6rem;
   font-weight: 300;
@@ -394,19 +432,11 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .sponsors__header--container {
-    -webkit-clip-path: circle(180vh at 50% -90vh);
-            clip-path: circle(180vh at 50% -90vh);
-  }
   .sponsors__header--container_contents h2 {
     font-size: 5rem;
   }
 }
 @media screen and (min-width: 968px) {
-  .about__header--container {
-    -webkit-clip-path: circle(180vh at 50% -80vh);
-            clip-path: circle(180vh at 50% -80vh);
-  }
   .about__header--container_contents h2 {
     font-size: 10rem;
   }
@@ -531,43 +561,26 @@ a {
 }
 .eventgain__container {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 5rem;
+  text-align: center;
 }
-.eventgain__container--header .eventgain-header {
-  font-size: 2rem;
-  line-height: 1.6;
-  font-weight: 700;
-  color: var(--text-color-white);
-  position: relative;
-}
-.eventgain__container--header .eventgain-header::before {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background-color: var(--text-color-red);
+.eventgain__container--header {
+  font-size: 3rem;
+  margin-bottom: 5rem;
 }
 .eventgain__container--contents {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
-}
-.eventgain__container--contents_item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0 1rem;
+  row-gap: 3rem;
 }
 .eventgain__container--contents_item .contents__item--header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
+  padding-bottom: 1rem;
 }
 .eventgain__container--contents_item .contents__item--header .contents__item--header-icon {
   display: flex;
@@ -582,23 +595,32 @@ a {
   color: var(--text-color-red);
 }
 .eventgain__container--contents_item .contents__item--header h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
-  text-transform: uppercase;
   color: var(--text-color-red);
 }
 .eventgain__container--contents_item .contents__item--summary p {
-  line-height: 1.6;
-  font-size: 1.5rem;
+  line-height: 1.5;
+  font-size: 1.4rem;
   text-align: inherit;
 }
 
 @media screen and (min-width: 768px) {
-  .eventgain__container--contents {
-    grid-template-columns: repeat(3, 1fr);
+  .eventgain__container {
+    flex-direction: row;
+    gap: 40rem;
+    text-align: left;
+    margin-bottom: 5rem;
   }
-  .eventgain__container--contents .meet, .eventgain__container--contents .talk {
-    align-self: flex-start;
+  .eventgain__container--header {
+    transform: rotate(-90deg);
+    font-size: 4.5rem;
+    align-self: flex-end;
+  }
+  .contents__item--header {
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
   }
 }
 .home__container {
@@ -703,6 +725,9 @@ a {
     align-items: flex-start;
     justify-content: flex-start;
     grid-template-columns: 70% 25%;
+    margin-top: 15rem;
+    gap: 35rem;
+    grid-template-columns: repeat(2, 1fr);
   }
   .home__container--intro .intro-title {
     color: var(--text-color-white);
@@ -711,12 +736,6 @@ a {
   .home__container--intro .intro-subtitle {
     color: var(--text-color-red);
     font-size: 10rem;
-  }
-  .home__container--left {
-    margin-top: 10rem;
-  }
-  .home__container--left_contents {
-    width: 60%;
   }
   .home__container--left_contents h2 {
     font-size: 1.5rem;
