@@ -114,15 +114,49 @@
                 position: absolute;
                 bottom: -1px;
                 left: 0;
-                width: 231px;
-                height: 3px;
+                width: 120px;
+                height: 2px;
                 background-color: var(--text-color-red);
               }
               .benefits__list--summary {
                 font-size: 1.3rem;
+                line-height: 1.5;
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+.sponsors__package {
+  &--container {
+    &_contents {
+      .sponsors__package--title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        .sponsors__package--heading {
+          font-size: 2rem;
+          font-weight: 700;
+          position: relative;
+        }
+        .sponsors__package--heading::after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 30%;
+          width: 70px;
+          height: 3px;
+          background-color: var(--text-color-red);
+        }
+        .sponsors__package--sub-heading {
+          font-size: 1.3rem;
+          line-height: 1.5;
+          text-align: center;
         }
       }
     }
@@ -154,6 +188,9 @@
   }
   .benefits__title p {
     padding: 0 10rem;
+  }
+  .benefits__title h3 {
+    margin: 8rem 0 2rem;
   }
 }
 

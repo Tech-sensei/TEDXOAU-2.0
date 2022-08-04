@@ -476,7 +476,7 @@ a {
 .blog__container--wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 4rem;
 }
@@ -512,16 +512,12 @@ a {
 }
 
 @media screen and (min-width: 968px) {
-  .blog__container--slider {
-    height: 70rem;
-  }
   .blog__container--header {
     font-size: 12rem;
     margin-bottom: 3rem;
   }
   .blog__container--wrapper {
     flex-direction: row;
-    justify-content: space-between;
   }
   .blog__container--wrapper_contents {
     width: 30%;
@@ -529,8 +525,8 @@ a {
   }
   .blog__img {
     position: relative;
-    width: 80rem;
-    height: 60rem;
+    width: 100%;
+    height: 40rem;
   }
 }
 .eventgain__container {
@@ -549,7 +545,7 @@ a {
 .eventgain__container--header .eventgain-header::before {
   content: "";
   position: absolute;
-  top: -8px;
+  bottom: -8px;
   left: 0;
   width: 60px;
   height: 4px;
@@ -861,12 +857,40 @@ a {
   position: absolute;
   bottom: -1px;
   left: 0;
-  width: 231px;
-  height: 3px;
+  width: 120px;
+  height: 2px;
   background-color: var(--text-color-red);
 }
 .sponsors__reasons--container_contents .benefits__contents .benefits__menu .benefits__items .benefits__list .benefits__list--summary {
   font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.sponsors__package--container_contents .sponsors__package--title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.sponsors__package--container_contents .sponsors__package--title .sponsors__package--heading {
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+}
+.sponsors__package--container_contents .sponsors__package--title .sponsors__package--heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 30%;
+  width: 70px;
+  height: 3px;
+  background-color: var(--text-color-red);
+}
+.sponsors__package--container_contents .sponsors__package--title .sponsors__package--sub-heading {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
 @media screen and (min-width: 576px) {
@@ -888,6 +912,9 @@ a {
   }
   .benefits__title p {
     padding: 0 10rem;
+  }
+  .benefits__title h3 {
+    margin: 8rem 0 2rem;
   }
 }
 @media screen and (min-width: 968px) {

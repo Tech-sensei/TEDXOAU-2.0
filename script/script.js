@@ -137,7 +137,7 @@ const slider = function () {
 
     goToSlide(curSlide);
   };
-  setInterval(nextSlide, 5000);
+  setInterval(nextSlide, 8000);
 
   const prevSlide = function () {
     if (curSlide === 0) {
